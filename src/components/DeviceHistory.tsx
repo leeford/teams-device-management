@@ -12,6 +12,19 @@ export const DeviceHistory: React.FunctionComponent<IDeviceHistoryProps> = (prop
 
     const columnsDef: IColumn[] = [
         {
+            key: "createdDateTime",
+            name: "Created",
+            fieldName: "createdDateTime",
+            minWidth: 200,
+            maxWidth: 350,
+            isRowHeader: true,
+            isResizable: true,
+            data: "string",
+            onRender: (item: TeamworkDeviceOperation) => {
+                return <Text>{item.createdDateTime && DateTime.fromISO(item.createdDateTime).toLocaleString(DateTime.DATETIME_MED)}</Text>
+            }
+        },
+        {
             key: "startedDateTime",
             name: "Started",
             fieldName: "startedDateTime",

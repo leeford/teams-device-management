@@ -19,7 +19,7 @@ export const ConnectionStatusIcon: React.FunctionComponent<IConnectionStatusIcon
             icon = (<Icon aria-label="disconnected" iconName="Cancel" styles={{ root: { color: DefaultPalette.red } }} />)
             break;
         default:
-            icon = (<Icon aria-label="unknown" iconName="Unknown" styles={{ root: { color: DefaultPalette.orangeLighter } }} />)
+            icon = (<Icon aria-label="unknown" iconName="Help" styles={{ root: { color: DefaultPalette.orangeLighter } }} />)
             break;
     }
 
